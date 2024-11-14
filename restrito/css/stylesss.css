@@ -1,0 +1,313 @@
+@charset "UTF-8";
+
+/* Configurações gerais */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 21px;
+}
+
+body {
+    background-color: gray;
+    padding: 10px;
+    width: 96vw;
+    height: 100vh;
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+#tela-inicial, .form, #tabela {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(221, 221, 221);
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.500);
+}
+
+.button {
+    border-radius: 10px;
+    border: none;
+    color: rgb(221, 221, 221);
+    cursor: pointer;
+    opacity: 0.7;
+    text-align: center;
+    font-weight: bold;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.button:hover {
+    opacity: 1;
+}
+
+.success {
+    background-color: limegreen;
+}
+
+.danger {
+    background-color: rgb(252, 52, 52);
+}
+
+.normal {
+    background-color: rgb(33, 33, 252);
+}
+
+
+/* Configurações login inicial*/
+
+#form-initial {
+    height: 390px;
+}
+
+#login-header {
+    padding: 20px 20px 0px 20px;
+}
+
+#login-header h1 {
+    font-size: 40px;
+    font-weight: normal;
+    margin-bottom: 15px;
+}
+
+#login-header p {
+    font-size: 20px;
+}
+
+#feedback {
+    margin-left: 20px;
+}
+
+/* Configurações tela inicial */
+#tela-inicial {
+    width: 80vw;
+    max-width: 1000px;
+    height: 500px;
+}
+
+#titulo {
+    margin: 150px 0px 20px 0px;
+}
+
+#titulo h1 {
+    font-size: 50px;
+}
+
+#descricao {
+    margin-bottom: 30px;
+}
+
+#titulo, #descricao {
+    padding-left: 20px;
+}
+
+#botoes {
+    justify-content: center;
+    display: flex;
+}
+
+.button-home {
+    width: 150px;
+    height: 35px;
+    margin: 5px;
+    padding-top: 10px;
+}
+
+/* Configurações tela de cadastro */
+
+#formulario {
+    width: 400px; 
+    height: 550px;
+
+}
+
+form {
+    padding: 20px;
+}
+
+.form-group, .form-group label {
+    display: block;
+}
+
+.form-group {
+    padding-bottom: 15px;
+}
+
+.form-group > input,
+.button-register {
+    width: 362px;
+    height: 42px;
+}
+
+.form-group input {
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+#back-home {
+    width: 362px;
+    height: 33px;
+    margin-top: 10px;
+    padding-top: 10px;
+    display: block;
+}
+
+.feedback {
+    height: 30px;
+    text-align: center;
+    padding-top: 7px;
+    border-radius: 10px;
+}
+
+/* Configurações da tabela */
+
+#tabela {
+    width: 85vw;
+    height: auto;
+    background-color: rgb(221, 221, 221);
+    padding: .5em;
+}
+
+#tabela h1 {
+    font-size: 37px;
+}
+
+#pesquisa {
+    height: 31px;
+    padding-left: 5px;
+    border-radius: 10px;
+}
+
+#pesquisar-botao {
+    width: 21vw;
+    max-width: 140px;
+    height: 35px;
+}
+
+#pesquisar-botao:hover {
+    opacity: 1;
+}
+
+table {
+    width: 82vw;
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+thead {
+    background-color: rgb(129, 129, 129);
+}
+
+tr, td {
+    padding: 10px;
+}
+
+tr {
+    background-color: rgb(192, 192, 192);
+    opacity: .7;
+}
+
+tbody tr:hover {
+    opacity: 1;
+}
+
+.numero-tabela{
+    min-width: 142px;
+}
+
+#container {
+    overflow-x: auto;
+    margin-bottom: 20px;
+}
+
+#image-table {
+    width: 150px;
+}
+
+#table-footer {
+    margin: auto;
+}
+
+/* Configurações botoes editar/excluir */
+
+.button-edit, .button-delet {
+    width: 90px;
+    height: 30px;
+    color: rgb(221, 221, 221);
+    padding-top: 10px;
+    margin: auto;
+    display: block;
+}
+
+.button-edit {
+    margin-bottom: 10px;
+}
+ 
+/* Modal */
+
+#fade,
+#modal {
+    transition: .5s;
+    opacity: 1;
+    pointer-events: all;
+}
+
+#fade {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 5;
+}
+
+#modal {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(221, 221, 221);
+    border-radius: 10px;
+    padding: 10px;
+    z-index: 10;
+    width: 500px;
+    max-width: 90%;
+    text-align: center;
+}
+
+.modal-header, .modal-body {
+    padding: 10px;
+    border-bottom: 2px solid #a0a0a0;
+}
+
+.modal-header h2 {
+    font-size: 30px;
+}
+
+.modal-body {
+    color: red;
+}
+
+.modal-body > #nome_pessoa {
+    font-weight: bold;
+} 
+
+#modal.hide,
+#fade.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#modal.hide {
+    top: 0;
+}
